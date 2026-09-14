@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPKA3D - Imagen conceptual</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 1080px;
+      height: 1080px;
+      margin: 0;
+      overflow: hidden;
+      background: #f3f5f7;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: #f3f5f7;
+      color: #101923;
+    }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      display: block;
+      filter: saturate(1.02) contrast(1.02) brightness(1.01);
+    }
+
+    .shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(247,249,251,.96) 0%, rgba(247,249,251,.88) 33%, rgba(247,249,251,.22) 58%, rgba(247,249,251,0) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,0) 42%, rgba(13,62,120,.08) 100%);
+    }
+
+    .topline {
+      position: absolute;
+      left: 64px;
+      top: 64px;
+      width: 952px;
+      height: 3px;
+      background: linear-gradient(90deg, #0d3e78 0 70%, #f05a18 70% 100%);
+    }
+
+    .logo {
+      position: absolute;
+      left: 64px;
+      top: 92px;
+      width: 214px;
+      height: auto;
+      display: block;
+    }
+
+    .copy {
+      position: absolute;
+      left: 64px;
+      top: 238px;
+      width: 430px;
+    }
+
+    .label {
+      margin: 0 0 18px;
+      color: #f05a18;
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: #0d3e78;
+      font-size: 68px;
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .subcopy {
+      margin: 28px 0 0;
+      max-width: 390px;
+      color: #223142;
+      font-size: 31px;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .cta {
+      position: absolute;
+      left: 64px;
+      bottom: 72px;
+      width: 350px;
+      min-height: 104px;
+      border-radius: 8px;
+      background: #0d3e78;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 22px 28px;
+      box-shadow: 0 18px 36px rgba(13, 62, 120, .25);
+    }
+
+    .cta span:first-child {
+      color: #f8b082;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+    }
+
+    .cta span:last-child {
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .badge {
+      position: absolute;
+      right: 64px;
+      bottom: 64px;
+      width: 188px;
+      min-height: 58px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.86);
+      color: #0d3e78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      font-size: 20px;
+      line-height: 1.1;
+      font-weight: 800;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(16,25,35,.12);
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="Pieza conceptual CAPKA3D">
+    <img class="photo" src="capka3d-imagen-inventada-organizador-source.png" alt="Organizador impreso en 3D sobre escritorio">
+    <div class="shade"></div>
+    <div class="topline"></div>
+    <img class="logo" src="../logo-capka3d-horizontal.svg" alt="CAPKA3D">
+    <section class="copy">
+      <p class="label">Ejemplo de impresión 3D</p>
+      <h1>Piezas útiles por encargo</h1>
+      <p class="subcopy">Enviá tu archivo o el enlace del modelo.</p>
+    </section>
+    <div class="cta">
+      <span>Consultas</span>
+      <span>Solicitá presupuesto</span>
+    </div>
+    <div class="badge">Imagen conceptual</div>
+  </main>
+</body>
+</html>
