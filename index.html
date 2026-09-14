@@ -8,6 +8,13 @@
       name="description"
       content="CAPKA3D ofrece impresión 3D por encargo en PLA. Enviá tu archivo 3D listo para imprimir y recibí una cotización personalizada."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://capka3d.github.io/" />
+    <meta property="og:title" content="CAPKA3D | Impresión 3D por encargo" />
+    <meta property="og:description" content="Piezas, prototipos y objetos impresos en 3D. Consultá por color, medida y cotización." />
+    <meta property="og:image" content="https://capka3d.github.io/assets/webp/hero-capka3d-premium-v2.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://capka3d.github.io/" />
     <link rel="preload" href="assets/webp/hero-capka3d-premium-v2.webp" as="image" />
     <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -114,8 +121,15 @@
             confirman por mensaje.
           </p>
         </div>
+        <div class="catalog-tools" aria-label="Filtrar catálogo">
+          <button class="catalog-filter is-active" type="button" data-filter="all" aria-pressed="true">Todo</button>
+          <button class="catalog-filter" type="button" data-filter="gaming" aria-pressed="false">Gaming</button>
+          <button class="catalog-filter" type="button" data-filter="escritorio" aria-pressed="false">Escritorio</button>
+          <button class="catalog-filter" type="button" data-filter="mate" aria-pressed="false">Mate</button>
+          <button class="catalog-filter" type="button" data-filter="figuras" aria-pressed="false">Figuras</button>
+        </div>
         <div class="ready-grid">
-          <article class="ready-card">
+          <article class="ready-card" data-category="figuras">
             <img
               src="assets/webp/busto-decorativo-claro.webp"
               alt="Busto decorativo impreso en PLA claro"
@@ -126,8 +140,8 @@
               <h3>Bustos decorativos</h3>
               <p>
                 Figuras con detalle para escritorio, estante o colección.
-                Precio a consultar.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -137,7 +151,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card ready-card-secamate">
+          <article class="ready-card ready-card-secamate" data-category="mate">
             <img
               src="assets/webp/secamate-capka3d-v1.webp"
               alt="Secamate impreso en PLA para apoyar y secar un mate"
@@ -150,6 +164,7 @@
                 Base diseñada para apoyar el mate, mantener la bombilla en su
                 lugar y favorecer el secado. Color a elección.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -159,7 +174,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card">
+          <article class="ready-card" data-category="gaming">
             <img
               src="assets/webp/soporte-joystick-playstation-capka3d-v2.webp"
               alt="Soporte geométrico para joystick de PlayStation 4 o 5 impreso en PLA"
@@ -172,6 +187,7 @@
                 Soporte geométrico de escritorio para joystick de PlayStation
                 4 o 5. Consultá por color y disponibilidad.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -181,7 +197,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card">
+          <article class="ready-card" data-category="gaming">
             <img
               src="assets/webp/soporte-joystick-playstation-clasico-capka3d-v1.webp"
               alt="Soporte clásico para joystick de PlayStation 4 o 5 impreso en PLA"
@@ -194,6 +210,7 @@
                 Variante con respaldo curvo para joystick de PlayStation 4 o
                 5. Elegí el color que combine con tu setup.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -203,7 +220,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card">
+          <article class="ready-card" data-category="escritorio">
             <img
               src="assets/webp/soporte-celular-plegable-capka3d-v3.webp"
               alt="Soporte plegable para celular impreso en PLA"
@@ -216,6 +233,7 @@
                 Base plegable de escritorio con panel ancho y repisa frontal
                 continua para sostener el celular cómodamente. Personalizable en color.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -225,7 +243,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card">
+          <article class="ready-card" data-category="figuras">
             <img
               src="assets/webp/busto-decorativo-verde.webp"
               alt="Busto decorativo impreso en PLA verde"
@@ -235,9 +253,9 @@
               <span>PLA verde</span>
               <h3>Figuras de personajes</h3>
               <p>
-                Piezas impresas en color, sujetas a disponibilidad. Precio a
-                consultar.
+                Piezas impresas en color, sujetas a disponibilidad.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -247,7 +265,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card">
+          <article class="ready-card" data-category="figuras">
             <img
               src="assets/webp/figura-azul-pla.webp"
               alt="Figura decorativa azul impresa en PLA"
@@ -258,8 +276,8 @@
               <h3>Piezas pequeñas</h3>
               <p>
                 Objetos decorativos chicos, ideales para regalos simples.
-                Precio a consultar.
               </p>
+              <p class="product-price">Precio a consultar</p>
               <a
                 class="ready-link"
                 href="#cotizar"
@@ -269,7 +287,7 @@
               </a>
             </div>
           </article>
-          <article class="ready-card ready-card-featured">
+          <article class="ready-card ready-card-featured" data-category="figuras">
             <img
               src="assets/webp/busto-azul-pla.webp"
               alt="Busto decorativo azul impreso en PLA"
@@ -292,6 +310,34 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="section trust-section" id="confianza">
+        <div class="section-kicker">Conocé el servicio</div>
+        <div class="section-heading">
+          <h2>Una impresión bien resuelta empieza antes de encender la máquina.</h2>
+          <p>
+            Revisamos el uso, material, color y cantidad antes de confirmar el trabajo. Así sabés qué esperar antes de imprimir.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article>
+            <span>01</span>
+            <h3>Cotización clara</h3>
+            <p>El precio se define según pieza, tamaño, material, cantidad y terminación.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Confirmación previa</h3>
+            <p>Plazo estimado y condiciones se confirman antes de comenzar a imprimir.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Entrega coordinada</h3>
+            <p>Retiro en Belvedere y envíos a evaluar según la zona.</p>
+          </article>
+        </div>
+        <a class="portfolio-link" href="https://www.instagram.com/capka3d/" target="_blank" rel="noopener noreferrer">Ver trabajos reales en Instagram</a>
       </section>
 
       <section class="section materials-section" id="materiales">
@@ -478,7 +524,7 @@
       <a class="quick-action quick-action-top" href="#inicio">Volver arriba</a>
       <a
         class="quick-action quick-action-whatsapp"
-        href="https://wa.me/59892467494"
+        href="https://wa.me/59892467494?text=Hola%2C%20quiero%20consultar%20por%20una%20impresi%C3%B3n%203D%20con%20CAPKA3D."
         target="_blank"
         rel="noopener noreferrer"
       >

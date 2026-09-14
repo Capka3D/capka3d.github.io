@@ -352,6 +352,32 @@ textarea {
 .ready-section .section-heading p {
   color: #bbb7af;
 }
+.catalog-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 40px;
+}
+.catalog-filter {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(245, 243, 237, 0.3);
+  color: #d9d5cd;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.catalog-filter:hover,
+.catalog-filter:focus-visible,
+.catalog-filter.is-active {
+  border-color: var(--gold);
+  color: #171716;
+  background: var(--gold);
+}
 .ready-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -393,9 +419,21 @@ textarea {
   font-size: 1.55rem;
 }
 .ready-card p {
-  margin: 0 0 24px;
+  margin: 0;
   color: #bcb9b2;
   line-height: 1.65;
+}
+.ready-card[hidden] {
+  display: none;
+}
+.product-price {
+  margin-top: 16px !important;
+  margin-bottom: 24px !important;
+  color: var(--gold) !important;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .ready-link {
   color: #eee7d9;
@@ -416,6 +454,54 @@ textarea {
 .ready-card-featured .ready-link {
   color: #171614;
   border-color: #171614;
+}
+.ready-card-featured .product-price {
+  color: #26231d !important;
+}
+.trust-section {
+  background: #eeece6;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 68px;
+  background: #c4bdb2;
+}
+.trust-grid article {
+  min-height: 230px;
+  padding: 32px;
+  background: #f5f3ed;
+}
+.trust-grid span {
+  display: block;
+  margin-bottom: 52px;
+  color: #9b8259;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+.trust-grid h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+.trust-grid p {
+  margin: 0;
+  color: #68645d;
+  line-height: 1.65;
+}
+.portfolio-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #7b684a;
+  color: #282622;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .materials-section {
   display: grid;
@@ -735,7 +821,8 @@ textarea {
   }
   .service-grid,
   .ready-grid,
-  .process-grid {
+  .process-grid,
+  .trust-grid {
     grid-template-columns: 1fr 1fr;
   }
   .process-grid li:nth-child(2) {
@@ -817,7 +904,8 @@ textarea {
   }
   .service-grid,
   .ready-grid,
-  .process-grid {
+  .process-grid,
+  .trust-grid {
     grid-template-columns: 1fr;
   }
   .ready-card img {

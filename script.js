@@ -2,6 +2,8 @@ const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const quoteForm = document.querySelector(".quote-form");
 const quoteDetails = document.querySelector("[name='detalles']");
+const catalogFilters = document.querySelectorAll(".catalog-filter");
+const catalogItems = document.querySelectorAll(".ready-card[data-category]");
 
 const WHATSAPP_NUMBER = "59892467494";
 
@@ -27,6 +29,22 @@ document.querySelectorAll("[data-quote-detail]").forEach((link) => {
     }
 
     document.querySelector("#cotizar")?.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+catalogFilters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    const selectedCategory = filter.dataset.filter;
+
+    catalogFilters.forEach((button) => {
+      const isActive = button === filter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    catalogItems.forEach((item) => {
+      item.hidden = selectedCategory !== "all" && item.dataset.category !== selectedCategory;
+    });
   });
 });
 
